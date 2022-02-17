@@ -41,7 +41,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ek0-Jz-NGC">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hero" id="ek0-Jz-NGC" customClass="CollectionViewCell" customModule="HeroesApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g1C-4H-r6Y">
@@ -70,6 +70,8 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="160" height="260"/>
                                 <connections>
+                                    <outlet property="descriptionHeroLabel" destination="edV-jk-1eU" id="Vjh-gp-Rp0"/>
+                                    <outlet property="heroImageView" destination="drs-Pf-UBF" id="4eq-uo-gkY"/>
                                     <segue destination="SrP-os-ufr" kind="show" id="ofy-Ng-Ft1"/>
                                 </connections>
                             </collectionViewCell>

@@ -17,6 +17,7 @@
 		5929C13527BE6A6500A732F0 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13427BE6A6500A732F0 /* HeroDetailsViewController.swift */; };
 		5929C13827BE70C400A732F0 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13727BE70C400A732F0 /* Hero.swift */; };
 		5929C13A27BE78B100A732F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13927BE78B100A732F0 /* NetworkManager.swift */; };
+		5929C13C27BE812500A732F0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13B27BE812500A732F0 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5929C13427BE6A6500A732F0 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
 		5929C13727BE70C400A732F0 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		5929C13927BE78B100A732F0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5929C13B27BE812500A732F0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		5929C13627BE6F2600A732F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5929C13B27BE812500A732F0 /* CollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				5929C13A27BE78B100A732F0 /* NetworkManager.swift in Sources */,
 				5929C13827BE70C400A732F0 /* Hero.swift in Sources */,
 				5929C13327BE680500A732F0 /* HeroesCollectionViewController.swift in Sources */,
+				5929C13C27BE812500A732F0 /* CollectionViewCell.swift in Sources */,
 				5929C13527BE6A6500A732F0 /* HeroDetailsViewController.swift in Sources */,
 				5929C11727BE5ED400A732F0 /* AppDelegate.swift in Sources */,
 				5929C11927BE5ED400A732F0 /* SceneDelegate.swift in Sources */,
