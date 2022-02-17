@@ -20,7 +20,7 @@ class NetworkManager {
     
     func fetchData(completion: @escaping(Result<[Hero], NetworkError>) -> Void) {
         
-        guard let url = URL(string: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.2.0/api/all.json") else {
+        guard let url = URL(string: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json") else {
             completion(.failure(.invalidUrl))
             return
         }
@@ -39,6 +39,8 @@ class NetworkManager {
                 }
             } catch {
                 completion(.failure(.decodingError))
+                print(error.localizedDescription)
+                print("3")
             }
         }.resume()
     }

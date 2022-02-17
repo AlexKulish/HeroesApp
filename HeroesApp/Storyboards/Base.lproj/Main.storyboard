@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,9 +13,12 @@
         <scene sceneID="HnC-fB-ib1">
             <objects>
                 <navigationController id="Y5S-CB-uJv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nt8-Fb-eUZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Nt8-Fb-eUZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="zEZ-37-H26" kind="relationship" relationship="rootViewController" id="FIv-6O-MOk"/>
@@ -31,43 +33,43 @@
             <objects>
                 <collectionViewController id="zEZ-37-H26" customClass="HeroesCollectionViewController" customModule="HeroesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jxA-OZ-tao">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J9c-HU-tpc">
-                            <size key="itemSize" width="128" height="128"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="J9c-HU-tpc">
+                            <size key="itemSize" width="160" height="260"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hero" id="ek0-Jz-NGC" customClass="CollectionViewCell" customModule="HeroesApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="260"/>
+                                <rect key="frame" x="107.5" y="30" width="160" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g1C-4H-r6Y">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edV-jk-1eU">
                                             <rect key="frame" x="0.0" y="239" width="160" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drs-Pf-UBF">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drs-Pf-UBF">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="239"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="edV-jk-1eU" secondAttribute="trailing" id="9Ph-n1-KeW"/>
-                                        <constraint firstAttribute="trailing" secondItem="drs-Pf-UBF" secondAttribute="trailing" id="AUr-fB-EPK"/>
-                                        <constraint firstItem="edV-jk-1eU" firstAttribute="top" secondItem="drs-Pf-UBF" secondAttribute="bottom" id="Q3k-cH-R7l"/>
-                                        <constraint firstAttribute="bottom" secondItem="edV-jk-1eU" secondAttribute="bottom" id="QBS-xE-Xi3"/>
-                                        <constraint firstItem="drs-Pf-UBF" firstAttribute="leading" secondItem="g1C-4H-r6Y" secondAttribute="leading" id="X7d-FT-PQM"/>
-                                        <constraint firstItem="edV-jk-1eU" firstAttribute="leading" secondItem="g1C-4H-r6Y" secondAttribute="leading" id="mML-RF-VtG"/>
-                                        <constraint firstItem="drs-Pf-UBF" firstAttribute="top" secondItem="g1C-4H-r6Y" secondAttribute="top" id="z03-GY-lmc"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="edV-jk-1eU" secondAttribute="trailing" id="9Ph-n1-KeW"/>
+                                    <constraint firstAttribute="trailing" secondItem="drs-Pf-UBF" secondAttribute="trailing" id="AUr-fB-EPK"/>
+                                    <constraint firstItem="edV-jk-1eU" firstAttribute="top" secondItem="drs-Pf-UBF" secondAttribute="bottom" id="Q3k-cH-R7l"/>
+                                    <constraint firstAttribute="bottom" secondItem="edV-jk-1eU" secondAttribute="bottom" id="QBS-xE-Xi3"/>
+                                    <constraint firstItem="drs-Pf-UBF" firstAttribute="leading" secondItem="ek0-Jz-NGC" secondAttribute="leading" id="X7d-FT-PQM"/>
+                                    <constraint firstItem="edV-jk-1eU" firstAttribute="leading" secondItem="ek0-Jz-NGC" secondAttribute="leading" id="mML-RF-VtG"/>
+                                    <constraint firstItem="drs-Pf-UBF" firstAttribute="top" secondItem="ek0-Jz-NGC" secondAttribute="top" id="z03-GY-lmc"/>
+                                </constraints>
                                 <size key="customSize" width="160" height="260"/>
                                 <connections>
                                     <outlet property="descriptionHeroLabel" destination="edV-jk-1eU" id="Vjh-gp-Rp0"/>
@@ -92,7 +94,7 @@
             <objects>
                 <viewController id="SrP-os-ufr" customClass="HeroDetailsViewController" customModule="HeroesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AFb-3p-EWb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="N59-ir-J1P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

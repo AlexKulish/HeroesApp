@@ -7,8 +7,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "hero"
-
 class HeroesCollectionViewController: UICollectionViewController {
     
     private var heroes: [Hero] = []
@@ -16,12 +14,6 @@ class HeroesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchHeroes()
-        
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -41,10 +33,9 @@ class HeroesCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hero", for: indexPath) as! CollectionViewCell
+        let hero = heroes[indexPath.item]
+        cell.configure(with: hero)
         return cell
     }
 

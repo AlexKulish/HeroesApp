@@ -34,23 +34,36 @@ struct Powerstats: Codable {
 // MARK: - Appearance
 
 struct Appearance: Codable {
-    let gender: String
-    let race: String
+    let gender: Gender
+//    let race: String
     let height, weight: [String]
     let eyeColor: String
     let hairColor: String
 }
 
+enum Gender: String, Codable {
+    case empty = "-"
+    case female = "Female"
+    case male = "Male"
+}
+
 // MARK: - Biography
 
 struct Biography: Codable {
-    let fullname: String
+//    let fullname: String
     let alterEgos: String
     let aliases: [String]
     let placeOfBirth: String
     let firstAppearance: String
-    let publisher: String
-    let alignment: String
+//    let publisher: String
+    let alignment: Alignment
+}
+
+enum Alignment: String, Codable {
+    case bad = "bad"
+    case empty = "-"
+    case good = "good"
+    case neutral = "neutral"
 }
 
 // MARK: - Work
