@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		5929C11727BE5ED400A732F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C11627BE5ED400A732F0 /* AppDelegate.swift */; };
 		5929C11927BE5ED400A732F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C11827BE5ED400A732F0 /* SceneDelegate.swift */; };
-		5929C11B27BE5ED400A732F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C11A27BE5ED400A732F0 /* ViewController.swift */; };
 		5929C11E27BE5ED400A732F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5929C11C27BE5ED400A732F0 /* Main.storyboard */; };
 		5929C12027BE5ED700A732F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5929C11F27BE5ED700A732F0 /* Assets.xcassets */; };
 		5929C12327BE5ED700A732F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5929C12127BE5ED700A732F0 /* LaunchScreen.storyboard */; };
 		5929C12B27BE62F300A732F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5929C12A27BE62F300A732F0 /* .gitignore */; };
+		5929C13327BE680500A732F0 /* HeroesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13227BE680500A732F0 /* HeroesCollectionViewController.swift */; };
+		5929C13527BE6A6500A732F0 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929C13427BE6A6500A732F0 /* HeroDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5929C11327BE5ED400A732F0 /* HeroesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5929C11627BE5ED400A732F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5929C11827BE5ED400A732F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5929C11A27BE5ED400A732F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5929C11D27BE5ED400A732F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5929C11F27BE5ED700A732F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5929C12227BE5ED700A732F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5929C12427BE5ED700A732F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5929C12A27BE62F300A732F0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		5929C13227BE680500A732F0 /* HeroesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewController.swift; sourceTree = "<group>"; };
+		5929C13427BE6A6500A732F0 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,73 @@
 		5929C11527BE5ED400A732F0 /* HeroesApp */ = {
 			isa = PBXGroup;
 			children = (
-				5929C11627BE5ED400A732F0 /* AppDelegate.swift */,
-				5929C11827BE5ED400A732F0 /* SceneDelegate.swift */,
-				5929C11A27BE5ED400A732F0 /* ViewController.swift */,
-				5929C11C27BE5ED400A732F0 /* Main.storyboard */,
-				5929C11F27BE5ED700A732F0 /* Assets.xcassets */,
-				5929C12127BE5ED700A732F0 /* LaunchScreen.storyboard */,
-				5929C12427BE5ED700A732F0 /* Info.plist */,
+				5929C13627BE6F2600A732F0 /* Views */,
+				5929C12F27BE658100A732F0 /* ViewControllers */,
+				5929C12D27BE652B00A732F0 /* Storyboards */,
+				5929C13127BE659800A732F0 /* Services */,
+				5929C13027BE658B00A732F0 /* Models */,
+				5929C12C27BE648200A732F0 /* App */,
+				5929C12E27BE656500A732F0 /* Resources */,
 				5929C12A27BE62F300A732F0 /* .gitignore */,
 			);
 			path = HeroesApp;
+			sourceTree = "<group>";
+		};
+		5929C12C27BE648200A732F0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5929C11827BE5ED400A732F0 /* SceneDelegate.swift */,
+				5929C11627BE5ED400A732F0 /* AppDelegate.swift */,
+				5929C12427BE5ED700A732F0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5929C12D27BE652B00A732F0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5929C11C27BE5ED400A732F0 /* Main.storyboard */,
+				5929C12127BE5ED700A732F0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5929C12E27BE656500A732F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5929C11F27BE5ED700A732F0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5929C12F27BE658100A732F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5929C13227BE680500A732F0 /* HeroesCollectionViewController.swift */,
+				5929C13427BE6A6500A732F0 /* HeroDetailsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5929C13027BE658B00A732F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5929C13127BE659800A732F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5929C13627BE6F2600A732F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5929C11B27BE5ED400A732F0 /* ViewController.swift in Sources */,
+				5929C13327BE680500A732F0 /* HeroesCollectionViewController.swift in Sources */,
+				5929C13527BE6A6500A732F0 /* HeroDetailsViewController.swift in Sources */,
 				5929C11727BE5ED400A732F0 /* AppDelegate.swift in Sources */,
 				5929C11927BE5ED400A732F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,13 +355,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XK5S24922;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HeroesApp/Info.plist;
+				INFOPLIST_FILE = HeroesApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,13 +384,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XK5S24922;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HeroesApp/Info.plist;
+				INFOPLIST_FILE = HeroesApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
