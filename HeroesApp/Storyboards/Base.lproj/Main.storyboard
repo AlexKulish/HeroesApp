@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,19 +95,38 @@
                     <view key="view" contentMode="scaleToFill" id="AFb-3p-EWb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="486-vo-xJB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="372.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOG-L2-SM9">
+                                <rect key="frame" x="20" y="402.5" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="N59-ir-J1P"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N59-ir-J1P" firstAttribute="bottom" secondItem="WOG-L2-SM9" secondAttribute="bottom" constant="200" id="24I-Yz-n0o"/>
+                            <constraint firstItem="WOG-L2-SM9" firstAttribute="leading" secondItem="N59-ir-J1P" secondAttribute="leading" constant="20" id="CzE-pB-CaZ"/>
+                            <constraint firstItem="486-vo-xJB" firstAttribute="top" secondItem="N59-ir-J1P" secondAttribute="top" id="HOT-tZ-q5H"/>
+                            <constraint firstItem="486-vo-xJB" firstAttribute="leading" secondItem="N59-ir-J1P" secondAttribute="leading" id="HZO-g6-AeL"/>
+                            <constraint firstItem="486-vo-xJB" firstAttribute="trailing" secondItem="N59-ir-J1P" secondAttribute="trailing" id="VLe-49-8Zw"/>
+                            <constraint firstItem="N59-ir-J1P" firstAttribute="trailing" secondItem="WOG-L2-SM9" secondAttribute="trailing" constant="20" id="jjb-9J-cgG"/>
+                            <constraint firstItem="WOG-L2-SM9" firstAttribute="top" secondItem="486-vo-xJB" secondAttribute="bottom" constant="30" id="mEs-9B-fYW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XSz-Pr-HsJ"/>
+                    <connections>
+                        <outlet property="downloadDataLabel" destination="WOG-L2-SM9" id="6lx-Mw-rSt"/>
+                        <outlet property="heroImageView" destination="486-vo-xJB" id="8g4-aE-Qwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh1-hN-MlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="45"/>
+            <point key="canvasLocation" x="544.79999999999995" y="44.527736131934034"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

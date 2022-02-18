@@ -8,22 +8,33 @@
 import UIKit
 
 class HeroDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet weak var downloadDataLabel: UILabel!
+    
+    var hero: Hero?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        downloadDataLabel.text = hero?.name
+        getImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getImage() {
+        
+        guard let url = URL(string: hero?.images.lg ?? "") else { return }
+        
+        NetworkManager.shared.fetchImage(from: url) { result in
+            switch result {
+            case .success(let image):
+                self.heroImageView.image = UIImage(data: image)
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        
     }
-    */
-
+    
 }
