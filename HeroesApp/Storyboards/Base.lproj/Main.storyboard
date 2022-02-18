@@ -96,12 +96,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="486-vo-xJB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="372.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="486-vo-xJB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOG-L2-SM9">
-                                <rect key="frame" x="20" y="402.5" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="393" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -112,8 +112,8 @@
                             <constraint firstItem="N59-ir-J1P" firstAttribute="bottom" secondItem="WOG-L2-SM9" secondAttribute="bottom" constant="200" id="24I-Yz-n0o"/>
                             <constraint firstItem="WOG-L2-SM9" firstAttribute="leading" secondItem="N59-ir-J1P" secondAttribute="leading" constant="20" id="CzE-pB-CaZ"/>
                             <constraint firstItem="486-vo-xJB" firstAttribute="top" secondItem="N59-ir-J1P" secondAttribute="top" id="HOT-tZ-q5H"/>
-                            <constraint firstItem="486-vo-xJB" firstAttribute="leading" secondItem="N59-ir-J1P" secondAttribute="leading" id="HZO-g6-AeL"/>
-                            <constraint firstItem="486-vo-xJB" firstAttribute="trailing" secondItem="N59-ir-J1P" secondAttribute="trailing" id="VLe-49-8Zw"/>
+                            <constraint firstItem="486-vo-xJB" firstAttribute="leading" secondItem="AFb-3p-EWb" secondAttribute="leading" id="HZO-g6-AeL"/>
+                            <constraint firstItem="486-vo-xJB" firstAttribute="trailing" secondItem="AFb-3p-EWb" secondAttribute="trailing" id="VLe-49-8Zw"/>
                             <constraint firstItem="N59-ir-J1P" firstAttribute="trailing" secondItem="WOG-L2-SM9" secondAttribute="trailing" constant="20" id="jjb-9J-cgG"/>
                             <constraint firstItem="WOG-L2-SM9" firstAttribute="top" secondItem="486-vo-xJB" secondAttribute="bottom" constant="30" id="mEs-9B-fYW"/>
                         </constraints>
