@@ -15,12 +15,12 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     
-//    private var imageUrl: URL? {
-//        didSet {
-//            heroImageView.image = nil
-//            updateImage()
-//        }
-//    }
+    private var imageUrl: URL? {
+        didSet {
+            heroImageView.image = nil
+            updateImage()
+        }
+    }
     
     private var activityIndicator: UIActivityIndicatorView?
     
@@ -31,51 +31,49 @@ class CollectionViewCell: UICollectionViewCell {
     
     func configure(with hero: Hero) {
         descriptionHeroLabel.text = hero.name
-        guard let url = URL(string: hero.images.lg) else { return }
-        
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            DispatchQueue.main.async {
-                self.activityIndicator?.stopAnimating()
-                self.heroImageView.image = UIImage(data: imageData)
-            }
-        }
-        
-//        imageUrl = URL(string: hero.images.lg)
+        imageUrl = URL(string: hero.images.lg)
     }
     
-//    private func updateImage() {
-//        guard let url = imageUrl else { return }
-//        getImage(with: url) { result in
-//            switch result {
-//            case .success(let image):
-//                if url == self.imageUrl {
-//                    self.heroImageView.image = image
-//                    self.activityIndicator?.stopAnimating()
-//                }
-//            case .failure(let error):
-//                print(error) //
-//            }
-//        }
-//    }
+    private func updateImage() {
+        guard let url = imageUrl else { return }
+        getImage(with: url) { result in
+            switch result {
+            case .success(let image):
+                if url == self.imageUrl {
+                    self.heroImageView.image = image
+                    self.activityIndicator?.stopAnimating()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
-//    private func getImage(with url: URL, completion: @escaping(Result<UIImage, NetworkError>) -> Void) {
-//
-//        NetworkManager.shared.fetchImage(from: url) { result in
-//            switch result {
-//            case .success(let data):
-//                guard let image = UIImage(data: data) else {
-//                    completion(.failure(.noData))
-//                    return
-//                }
-//                completion(.success(image))
-//
-//            case .failure(_):
-//                completion(.failure(.invalidUrl))
-//            }
-//        }
-//
-//    }
+    private func getImage(with url: URL, completion: @escaping(Result<UIImage, Error>) -> Void) {
+        
+        // Get image from cache
+        
+        if let imageCached = ImageCache.shared.object(forKey: url.lastPathComponent as NSString) {
+            print("Image from cache: ", url.lastPathComponent)
+            completion(.success(imageCached))
+            return
+        }
+        
+        // Download image from network
+
+        NetworkManager.shared.fetchImage(from: url) { result in
+            switch result {
+            case .success(let data):
+                guard let image = UIImage(data: data) else { return }
+                ImageCache.shared.setObject(image, forKey: url.lastPathComponent as NSString)
+                print("Image from network: ", url.lastPathComponent)
+                completion(.success(image))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+
+    }
     
     private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
